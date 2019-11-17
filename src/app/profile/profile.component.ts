@@ -82,8 +82,8 @@ export class ProfileComponent implements OnInit {
       };
 
       reader.onerror = function() {
-        alert('Error occured while reading file!' + ' ' + reader.error.message);
-        console.log(reader.error.message);
+        // alert('Error occured while reading file!' + ' ' + reader.error.message);
+        // console.log(reader.error.message);
       };
     } else {
       alert('Please upload a valid .csv file.');
