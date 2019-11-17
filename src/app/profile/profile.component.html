@@ -1,0 +1,86 @@
+<div class="uploadOuterWrapper">
+  <div class="uploadWrapper">
+    <h4>CSV File Upload</h4>
+    <div *ngIf="error" class="error">
+      {{ error.message }}
+    </div>
+
+    <div *ngIf="uploadResponse.status === 'error'" class="error">
+      {{ uploadResponse.message }}
+    </div>
+
+    <div *ngIf="uploadResponse.status === 'progress'" class="progress">
+      <div role="progressbar" [style.width.%]="uploadResponse.message" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{ uploadResponse.message }}%</div>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+      <div class="form-inputs-wrap">
+        <input #csvReader type="file" name="avatar" (change)="uploadListener($event)" accept=".csv" />
+
+        <button type="submit" class="submitBtn" [disabled]="submitDisabled">
+          Upload
+        </button>
+      </div>
+
+      <div class="table-wrap" *ngIf="records.length > 0">
+        <label>File Data</label>
+        <hr size="1" />
+        <table class="table">
+          <thead>
+            <tr>
+              <!-- <th>ID </th>    
+        <th>FirstName </th>    
+        <th>LastName </th>    
+        <th>Age </th>     -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let record of records; let i = index">
+              <td>
+                <span>{{ record.id }}</span>
+              </td>
+              <td>
+                <span>{{ record.name }}</span>
+              </td>
+              <td>
+                <span>{{ record.yesOrNo }}</span>
+              </td>
+              <td>
+                <span>{{ record.phone }}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="records.length > 0" class="file-info">
+        <label>File Info</label>
+        <hr size="1" />
+        <table class="fileinfotbl">
+          <tr>
+            <td style="width:80px;">File Name:</td>
+            <td>{{ fileName }}</td>
+          </tr>
+          <tr>
+            <td>File Size:</td>
+            <td>{{ fileSize }}</td>
+          </tr>
+          <tr>
+            <td>File Type:</td>
+            <td>{{ fileType }}</td>
+          </tr>
+          <tr>
+            <td>Last Modified:</td>
+            <td>{{ fileModDate | date: 'MM/dd/yy HH:mm' }}</td>
+          </tr>
+        </table>
+
+        <!-- <ul>
+        <li>File Name: {{ fileName }}</li>
+        <li>File Size: {{ fileSize }}</li>
+        <li>File Type: {{ fileType }}</li>
+        <li>File Updated: {{ fileModDate }}</li>
+      </ul> -->
+      </div>
+    </form>
+  </div>
+</div>

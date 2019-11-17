@@ -1,0 +1,118 @@
+table td {
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  border: solid 1px #ddd;
+}
+
+table {
+  max-width: 240px;
+  border-collapse: collapse;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul li {
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error {
+  clear: both;
+  color: darkred;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 6px;
+  font-weight: 600;
+  background-color: #eadbde;
+  padding: 8px;
+}
+
+.progress {
+  clear: both;
+  color: darkgreen;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.file-info {
+  float: left;
+  margin-left: 20px;
+  border-left: solid 1px #aaa;
+  padding-left: 30px;
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form {
+  float: left;
+}
+
+.uploadWrapper {
+  border: solid 1px #ddd;
+  padding: 15px;
+}
+
+.uploadOuterWrapper {
+  display: flex;
+  justify-content: center;
+  /* background-color: DodgerBlue; */
+}
+
+.table {
+}
+
+.table-wrap {
+  /* border-right: solid 1px #000; */
+  clear: left;
+  float: left;
+  margin-right: 10px;
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* padding-right: 30px; */
+}
+
+.form-inputs-wrap {
+  float: left;
+  border: solid 1px #ddd;
+  padding: 5px;
+  background-color: whitesmoke;
+  margin-bottom: 10px;
+  min-width: 450px;
+}
+
+h4 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+label {
+  font-weight: 600;
+}
+
+.fileinfotbl td {
+  border: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 11px;
+  border: none;
+  padding: 2px;
+}
+
+.fileinfotbl {
+  border-collapse: collapse;
+}
+
+.fileinfotbl td:first-child {
+  font-weight: 600;
+}
+
+.submitBtn {
+  float: right;
+}
