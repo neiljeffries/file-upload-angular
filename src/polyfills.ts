@@ -37,9 +37,6 @@ import 'core-js/es6/set';
 import 'core-js/es6/string';
 import 'core-js/es6/symbol';
 import 'core-js/es6/weak-map';
-/** Evergreen browsers require these. **/
-// Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.
-import 'core-js/es7/reflect';
 /**
  * Web Animations `@angular/platform-browser/animations`
  * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
